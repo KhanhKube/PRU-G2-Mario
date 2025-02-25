@@ -1,0 +1,24 @@
+# Quy định tất cả file text dùng LF để tránh lỗi CRLF
+* text=auto
+
+# Định dạng line endings chuẩn cho các file C# và shader
+*.cs text eol=lf
+*.shader text eol=lf
+
+# Đảm bảo file Unity metadata dùng LF
+*.meta text eol=lf
+
+# Unity scene, prefab, và asset cũng nên dùng LF
+*.unity text eol=lf
+*.prefab text eol=lf
+*.asset text eol=lf
+
+# Các file hình ảnh, âm thanh, model 3D là binary (không tự động chỉnh sửa)
+*.png binary
+*.jpg binary
+*.fbx binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.ttf binary
+*.otf binary
