@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    public int damage = 20; // Sát thương của bẫy
+    //public int damage = 20; // Sát thương của bẫy
 
     //private void OnTriggerEnter(Collider other)
     //{
