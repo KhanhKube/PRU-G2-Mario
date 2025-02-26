@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,10 +11,12 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool isGrounded;
     private Rigidbody2D rb;
+    private HealthManager healthManager;
     //private GameManager gameManager;
     //private AudioManager audioManager;
     private void Awake()
     {
+        healthManager = GetComponent<HealthManager>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         //gameManager = FindAnyObjectByType<GameManager>();
@@ -56,5 +58,22 @@ public class PlayerController : MonoBehaviour
         bool isJumping = !isGrounded;
         animator.SetBool("isRunning", isRunning);
         animator.SetBool("isJumping", isJumping);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            if (healthManager != null)
+            {
+                healthManager.TakeDamage(20);
+
+                // Chỉ hủy người chơi nếu máu giảm xuống 0
+                if (healthManager.currentHealth <= 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
     }
 }
