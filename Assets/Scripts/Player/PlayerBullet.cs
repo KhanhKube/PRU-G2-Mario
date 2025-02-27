@@ -34,15 +34,15 @@ public class PlayerBullet : MonoBehaviour
         {
             ReturnToPool();
         }
-        //else if (collision.CompareTag("Enemy"))
-        //{
-        //    Enemy enemy = collision.GetComponent<Enemy>();
-        //    if (enemy != null)
-        //    {
-        //        enemy.Die();
-        //    }
-        //    ReturnToPool();
-        //}
+        else if (collision.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.Die();
+            }
+            ReturnToPool();
+        }
     }
     private void ReturnToPool()
     {
