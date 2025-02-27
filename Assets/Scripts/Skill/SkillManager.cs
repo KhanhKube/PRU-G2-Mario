@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-
+using UnityEngine.UI;
 public class SkillManager : MonoBehaviour
 {
     // Lưu danh sách kỹ năng với giá tiền
     public Dictionary<string, int> skillPrices = new Dictionary<string, int>();
-
+    public Text SkillCostYellow;
+    public Text SkillCostRed;
     // Giá tiền của từng kỹ năng
+    private int playerCoins = 100;
     [System.Serializable]
     public class Skill
     {
@@ -23,6 +25,7 @@ public class SkillManager : MonoBehaviour
         {
             skillPrices[skill.skillName] = skill.price;
         }
+        UpdateUI();
     }
 
     // Hàm lấy giá của kỹ năng
@@ -36,15 +39,31 @@ public class SkillManager : MonoBehaviour
     }
 
     // Hàm mua kỹ năng
-    public bool BuySkill(string skillName, ref int playerCoins)
+    public void BuySkillYeLLow()
     {
-        if (skillPrices.ContainsKey(skillName) && playerCoins >= skillPrices[skillName])
+        if (skillPrices.ContainsKey("Skill_Yellow_Low") && playerCoins >= skillPrices["Skill_Yellow_Low"])
         {
-            playerCoins -= skillPrices[skillName]; // Trừ tiền
-            Debug.Log("Đã mua kỹ năng: " + skillName);
-            return true;
+            playerCoins -= skillPrices["Skill_Yellow_Low"]; // Trừ tiền
+            Debug.Log("Đã mua kỹ năng: " + "Skill_Yellow_Low");
+           
         }
-        Debug.Log("Không đủ tiền để mua: " + skillName);
-        return false;
+        Debug.Log("Không đủ tiền để mua: " + "Skill_Yellow_Low");
+       
+    }
+    public void BuySkillRed()
+    {
+        if (skillPrices.ContainsKey("Skill_Red_Low") && playerCoins >= skillPrices["Skill_Red_Low"])
+        {
+            playerCoins -= skillPrices["Skill_Red_Low"]; // Trừ tiền
+            Debug.Log("Đã mua kỹ năng: " + "Skill_Red_Low");
+           
+        }
+        Debug.Log("Không đủ tiền để mua: " + "Skill_Red_Low");
+       
+    }
+    private void UpdateUI()
+    {
+        SkillCostYellow.text = $"{skillPrices.GetValueOrDefault("Skill_Yellow_Low", 0)}";
+        SkillCostRed.text = $"{skillPrices.GetValueOrDefault("Skill_Red_Low", 0)}";
     }
 }

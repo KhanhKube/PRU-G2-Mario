@@ -11,7 +11,7 @@ public class GoldCoin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameManager.CollectApple(gameObject); // Gọi GameManager để thu thập táo và tăng điểm
+            gameManager.CollecCoin(gameObject); // Gọi GameManager để thu thập táo và tăng điểm
         }
     }
 

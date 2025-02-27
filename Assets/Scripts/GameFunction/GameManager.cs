@@ -1,50 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int score = 0;
-    public GameObject[] apples;
-
+    public int CoinNum = 0;
+    public GameObject[] coins;
+    
+    public Text CoinText;
+   
 
     private void Start()
     {
-
+        UpdateUI();
+        coins = GameObject.FindGameObjectsWithTag("Coin");
     }
 
     private void Update()
     {
-       
-       
 
-        // Kiểm tra nếu không còn quả táo nào -> Game Win
-        if (apples.Length == 0)
-        {
-            CheckGameWin();
-        }
-
-        // Kiểm tra nếu score < 0 -> Game Over
-        if (score == -1)
-        {
-            CheckGameOver();
-        }
+     
     }
 
     // Ăn táo
-    public void CollectApple(GameObject coin)
+    public void CollecCoin(GameObject coin)
     {
-        score++;
+        CoinNum++;
         Destroy(coin);
-        apples = GameObject.FindGameObjectsWithTag("Coin");
+        UpdateUI();
     }
 
     // Va chạm enemy
     public void Enemy(GameObject enemy)
     {
-        score--;
-        if (score == -1)
+        CoinNum--;
+        if (CoinNum == -1)
         {
             CheckGameOver();
         }
@@ -67,5 +58,8 @@ public class GameManager : MonoBehaviour
         // Tạm dừng game, ngăn người chơi di chuyển tiếp (tuỳ chọn)
         Time.timeScale = 0f;
     }
-
+    public void UpdateUI()
+    {
+        CoinText.text = $"{CoinNum}";
+    }
 }
