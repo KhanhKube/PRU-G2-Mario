@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     {
         UpdateUI();
         coins = GameObject.FindGameObjectsWithTag("Coin");
+        PlayerPrefs.SetInt("Coin", CoinNum);
+        PlayerPrefs.Save();
     }
 
     private void Update()
@@ -44,15 +46,12 @@ public class GameManager : MonoBehaviour
         {
             CheckGameOver();
         }
-        // Nếu muốn khi chạm enemy thì hủy enemy luôn, thì thêm Destroy(enemy);
-        // Destroy(enemy);
+       
     }
 
     private void CheckGameWin()
     {
-        // Hiển thị "Game Win"
        
-        // Tạm dừng game, ngăn người chơi di chuyển tiếp (tuỳ chọn)
 
     }
 

@@ -15,6 +15,8 @@ public class HealthManager : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        PlayerPrefs.SetInt("MaxHealth", maxHealth);
+        PlayerPrefs.Save();
     }
 
     private void Update()
