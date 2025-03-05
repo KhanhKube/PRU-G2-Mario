@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    
+
     public int CoinNum = 0;
     public GameObject[] coins;
     
