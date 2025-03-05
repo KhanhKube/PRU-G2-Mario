@@ -1,9 +1,14 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private ObjectPool bulletPool;  // Reference to your bullet object pool
+    [SerializeField] private Transform firePoint;    // Where bullets spawn
+    [SerializeField] private float fireRate = 0.5f;  // Time between shots
+    private float nextFireTime = 0f;
+    private bool facingRight = true;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 15f;
     [SerializeField] private LayerMask groundLayer;
@@ -26,17 +31,45 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.J) && Time.time > nextFireTime)  // Fire with J
+        {
+            FireBullet();
+            nextFireTime = Time.time + fireRate;
+        }
         //if (gameManager.IsGameOver() || gameManager.IsGameWin()) return;
         HandleMovement();
         HandleJump();
         UpdateAnimation();
     }
+    private void FireBullet()
+    {
+        if(firePoint != null)
+        {
+            GameObject bullet = bulletPool.GetObject();  // Get a bullet from the pool
+            bullet.transform.position = firePoint.position;
+            bullet.transform.rotation = Quaternion.identity;
+            bullet.SetActive(true);
+
+            PlayerBullet bulletComponent = bullet.GetComponent<PlayerBullet>();
+            if (bulletComponent != null)
+            {
+                Vector2 direction = facingRight ? Vector2.right : Vector2.left;  // Fire in the correct direction
+                bulletComponent.Launch(direction);
+            }
+        }
+       
+    }
     private void HandleMovement()
     {
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-        if (moveInput > 0) transform.localScale = new Vector3(1, 1, 1);
-        else if (moveInput < 0) transform.localScale = new Vector3(-1, 1, 1);
+        if (moveInput > 0) {
+            facingRight = true;
+            transform.localScale = new Vector3(1, 1, 1); }
+        else if (moveInput < 0){
+            facingRight = false;
+            transform.localScale = new Vector3(-1, 1, 1);
+    }
     }
     private void HandleJump()
     {
@@ -50,10 +83,6 @@ public class PlayerController : MonoBehaviour
     }
     private void UpdateAnimation()
     {
-        if (!isGrounded)
-        {
-            Debug.Log("dsfsdfs");
-        }
         bool isRunning = Mathf.Abs(rb.velocity.x) > 0.1f;
         bool isJumping = !isGrounded;
         animator.SetBool("isRunning", isRunning);
@@ -64,6 +93,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+
             if (healthManager != null)
             {
                 healthManager.TakeDamage(20);
@@ -75,5 +105,38 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        if (collision.CompareTag("HeadEnemy"))
+        {
+            // Lấy GameObject cha của HeadEnemy (Enemy)
+            GameObject enemyParent = collision.transform.parent.gameObject;
+
+            if (enemyParent != null)
+            {
+                Destroy(enemyParent); // Hủy cả Enemy
+            }
+
+            // Gọi hàm nhảy lại của Player sau khi đạp trúng
+            JumpAfterStomp();
+        }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Time.timeScale = 0;
+        }
+    }
+
+
+    private void JumpAfterStomp()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 17f); 
+        }
+    }
+
 }

@@ -8,6 +8,7 @@ TagManager:
   - Trap
   - Key
   - Enemy
+  - HeadEnemy
   layers:
   - Default
   - TransparentFX
