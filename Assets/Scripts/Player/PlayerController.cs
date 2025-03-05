@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FireBullet()
     {
-        if(firePoint != null)
+        if (firePoint != null)
         {
             GameObject bullet = bulletPool.GetObject();  // Get a bullet from the pool
             bullet.transform.position = firePoint.position;
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
                 bulletComponent.Launch(direction);
             }
         }
-       
+
     }
     private void HandleMovement()
     {
@@ -66,10 +66,10 @@ public class PlayerController : MonoBehaviour
         if (moveInput > 0) {
             facingRight = true;
             transform.localScale = new Vector3(1, 1, 1); }
-        else if (moveInput < 0){
+        else if (moveInput < 0) {
             facingRight = false;
             transform.localScale = new Vector3(-1, 1, 1);
-    }
+        }
     }
     private void HandleJump()
     {
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-       
+
     }
     private void UpdateAnimation()
     {
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") )
         {
 
             if (healthManager != null)
@@ -125,7 +125,16 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Time.timeScale = 0;
+            if (healthManager != null)
+            {
+                healthManager.TakeDamage(20);
+
+                // Chỉ hủy người chơi nếu máu giảm xuống 0
+                if (healthManager.currentHealth <= 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
     }
 
