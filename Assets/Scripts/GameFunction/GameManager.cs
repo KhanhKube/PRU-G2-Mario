@@ -9,8 +9,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] coins;
     
     public Text CoinText;
-   
+    private AudioManager audioManager;
 
+    private void Awake()
+    {
+        audioManager = FindAnyObjectByType<AudioManager>();
+    }
     private void Start()
     {
         UpdateUI();
@@ -27,6 +31,7 @@ public class GameManager : MonoBehaviour
     public void CollecCoin(GameObject coin)
     {
         CoinNum++;
+        audioManager.PlayCoinSound();
         Destroy(coin);
         UpdateUI();
     }

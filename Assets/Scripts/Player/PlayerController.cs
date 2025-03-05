@@ -13,14 +13,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private HealthManager healthManager;
     //private GameManager gameManager;
-    //private AudioManager audioManager;
+    private AudioManager audioManager;
     private void Awake()
     {
         healthManager = GetComponent<HealthManager>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         //gameManager = FindAnyObjectByType<GameManager>();
-        //audioManager = FindAnyObjectByType<AudioManager>();
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            //audioManager.PlayJumpSound();
+            audioManager.PlayJumpSound();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
