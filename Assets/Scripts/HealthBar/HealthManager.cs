@@ -32,4 +32,10 @@ public class HealthManager : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetCurrentHealth(currentHealth);
     }
+
+    public void IncreaseDamage(int amount)
+    {
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        healthBar.SetCurrentHealth(currentHealth);
+    }
 }

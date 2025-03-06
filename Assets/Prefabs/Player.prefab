@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1441514349146711786}
   - component: {fileID: 1441514349146711785}
   - component: {fileID: 1441514349146711784}
-  - component: {fileID: 1441514349146711575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -171,6 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4885fc127232642acb78ed6130c788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPool: {fileID: 0}
+  firePoint: {fileID: 0}
+  fireRate: 0.5
   moveSpeed: 5
   jumpForce: 15
   groundLayer:
@@ -192,21 +194,6 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 0}
---- !u!114 &1441514349146711575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441514349146711791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4af67b57e9914f7448c99646666b909e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxEnergy: 100
-  currentEnergy: 0
-  engergyBar: {fileID: 0}
 --- !u!1 &1441514349328110897
 GameObject:
   m_ObjectHideFlags: 0
