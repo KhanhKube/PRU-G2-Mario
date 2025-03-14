@@ -31,5 +31,8 @@ public class HealthManager : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetCurrentHealth(currentHealth);
+        if (currentHealth <= 0) {
+            currentHealth = 0;        
+        }
     }
 }
