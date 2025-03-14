@@ -35,4 +35,10 @@ public class HealthManager : MonoBehaviour
             currentHealth = 0;        
         }
     }
+
+    public void IncreaseDamage(int amount)
+    {
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        healthBar.SetCurrentHealth(currentHealth);
+    }
 }
