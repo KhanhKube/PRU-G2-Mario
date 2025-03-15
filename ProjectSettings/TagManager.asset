@@ -9,6 +9,7 @@ TagManager:
   - Key
   - Enemy
   - HeadEnemy
+  - HealthIcon
   - AmmoPack
   layers:
   - Default
@@ -58,6 +59,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 2734896443
+    locked: 0
+  - name: UI
+    uniqueID: 2854611585
     locked: 0
   - name: Ui
     uniqueID: 636308533
