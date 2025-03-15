@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class UpgradeStats : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public int maxHealth;
     public int maxMana = 100;
-    private int gold = 100; // Số vàng ban đầu
+    private int gold; // Số vàng ban đầu
 
     public int healthUpgradeCost = 20; // Giá nâng cấp máu
     public int manaUpgradeCost = 20; // Giá nâng cấp mana
@@ -26,6 +26,14 @@ public class UpgradeStats : MonoBehaviour
 
     void Start()
     {
+        if (PlayerPrefs.HasKey("MaxHealth"))
+        {
+            maxHealth = PlayerPrefs.GetInt("MaxHealth");
+        }
+        if (PlayerPrefs.HasKey("Coin"))
+        {
+            gold = PlayerPrefs.GetInt("Coin");
+        }
         UpdateUI();
     }
 

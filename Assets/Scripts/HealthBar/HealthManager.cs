@@ -15,6 +15,8 @@ public class HealthManager : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        PlayerPrefs.SetInt("MaxHealth", maxHealth);
+        PlayerPrefs.Save();
     }
 
     private void Update()
@@ -28,6 +30,15 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        healthBar.SetCurrentHealth(currentHealth);
+        if (currentHealth <= 0) {
+            currentHealth = 0;        
+        }
+    }
+
+    public void IncreaseDamage(int amount)
+    {
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
         healthBar.SetCurrentHealth(currentHealth);
     }
 }
