@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
     {
         // Hiển thị "Game Over"
       PopupGameOver.SetActive(true);
-        Time.timeScale = 0f;
         // Tạm dừng game, ngăn người chơi di chuyển tiếp (tuỳ chọn)
 
     }
@@ -75,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void StopGame()
     {
+        Debug.Log("Game Stop");
         popupPanel.SetActive(true); // Hiện popup
         Time.timeScale = 0f; 
     }
@@ -97,5 +97,15 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f; // Đảm bảo game không bị dừng
         SceneManager.LoadScene("Island");
+    }
+    public void NextMap_SkyCity()
+    {
+        Time.timeScale = 1f; // Đảm bảo game không bị dừng
+        SceneManager.LoadScene("Sky_City");
+    }
+    public void NextMap_NuiLua()
+    {
+        Time.timeScale = 1f; // Đảm bảo game không bị dừng
+        SceneManager.LoadScene("Nui_Lua");
     }
 }

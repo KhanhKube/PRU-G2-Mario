@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("Nui_Lua"); // Chuyển đến scene chơi game
     }
-
+    
     public void LoadShopScene()
     {
         SceneManager.LoadScene("UpdatePlayer"); // Chuyển đến scene cửa hàng
