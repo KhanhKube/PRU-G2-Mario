@@ -1601,6 +1601,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 1536462102}
+  maxAmmo: 10
 --- !u!95 &1101643184
 Animator:
   serializedVersion: 5

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,12 +14,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 15f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
+    [SerializeField] private int maxAmmo = 10;  // Số đạn tối đa
+    private int currentAmmo;
+
     private Animator animator;
     private bool isGrounded;
     private Rigidbody2D rb;
     private HealthManager healthManager;
     //private GameManager gameManager;
     private AudioManager audioManager;
+
+    public int GetCurrentAmmo() { return currentAmmo; }
+    public int GetMaxAmmo() { return maxAmmo; }
+
     private void Awake()
     {
         healthManager = GetComponent<HealthManager>();
@@ -26,12 +34,14 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //gameManager = FindAnyObjectByType<GameManager>();
         audioManager = FindAnyObjectByType<AudioManager>();
+
+        currentAmmo = maxAmmo;
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) && Time.time > nextFireTime)  // Fire with J
+        if (Input.GetKeyDown(KeyCode.J) && Time.time > nextFireTime && currentAmmo > 0)  // Fire with J
         {
             FireBullet();
             nextFireTime = Time.time + fireRate;
@@ -56,9 +66,21 @@ public class PlayerController : MonoBehaviour
                 Vector2 direction = facingRight ? Vector2.right : Vector2.left;  // Fire in the correct direction
                 bulletComponent.Launch(direction);
             }
+
+            currentAmmo--; // Giảm số lượng đạn khi bắn
+            Debug.Log("Số đạn còn lại: " + currentAmmo);
+            UIManager.Instance.UpdateAmmoUI(currentAmmo, maxAmmo);
         }
 
     }
+
+    public void ReloadAmmo(int amount)
+    {
+        currentAmmo = Mathf.Min(currentAmmo + amount, maxAmmo);
+        UIManager.Instance.UpdateAmmoUI(currentAmmo, maxAmmo);
+        Debug.Log("Đã nạp đạn. Số đạn hiện tại: " + currentAmmo);
+    }
+
     private void HandleMovement()
     {
         float moveInput = Input.GetAxis("Horizontal");
