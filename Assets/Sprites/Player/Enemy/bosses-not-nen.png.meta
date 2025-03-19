@@ -1,0 +1,2531 @@
+fileFormatVersion: 2
+guid: 0de0b1e0bbee71848bd4ee9e38fe95ff
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bosses-not-nen_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1135
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba5dffa311a68e4ebfc8c7c6ccf152d
+      internalID: 1244803400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1142
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999211a6f1dd2804c9af2d07d8f2b659
+      internalID: 91276859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_2
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1140
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ad321005f15444dbdc14ed7738e26b
+      internalID: 297733215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1137
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920915f47d210864087d585533df29bd
+      internalID: -1083357407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_4
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1137
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189f83b857b98964383c2f6cbca22924
+      internalID: 1154778516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1137
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0253e68407322804bbd310803a7c3ad3
+      internalID: 1000409868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_6
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1137
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7157404961a83d2458c862e40d0897cd
+      internalID: -1151210436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_7
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1137
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e33f411b5205654c93a6eb45fa89499
+      internalID: -1277736166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_8
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1135
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1192ccd0191744c47997f9cd9f2935c5
+      internalID: 256830262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_9
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 1135
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f0a591f97e8f14faf619b5ee346302
+      internalID: -243915663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1104
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965f3f8adfb38ea439e1bfe1126df269
+      internalID: 1153973886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1105
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c661fcdd8583c8e4ba579edaa34ba4a2
+      internalID: -1458744887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_12
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1104
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5488f2c84ce823d4b99f39a7ad2e979b
+      internalID: 514620808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1104
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ba8634c41aef044badbd7415a3e549
+      internalID: 1483226292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_14
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1104
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19f1b26ff4c9de4ba1dc560a1ad4cf7
+      internalID: -696915909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1104
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324586c3545bb2044bb06217d78d361c
+      internalID: 1797189291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_16
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1104
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5020ff5e7bd4143b219ecac6a38048
+      internalID: -470030826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_17
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1074
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d00d3f612081a4db246b1bf429cdc1
+      internalID: -1939260355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1074
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902991fba3af2344a94062de3590a1f4
+      internalID: -173143530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_19
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1074
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba14f3a809b172f48a144626d6e6d272
+      internalID: 1731620402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_20
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1032
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7395d28fba6a2c047b039e99e3406cc3
+      internalID: 713489493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_21
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1032
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abc448ea3586284c902034613c5b467
+      internalID: 580642013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_22
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1031
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281ccaa3d4708854693b519a7d53304a
+      internalID: -700614514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_23
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1029
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa6a465eca283745adba6135a30e8a4
+      internalID: 136784471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_24
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1004
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d6a52745166d44ebd9b9660eb424d3
+      internalID: -2046549624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1004
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b83ed91e42e284db98a638e3d37450
+      internalID: 629195229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_26
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1004
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cce10c61f126fe45b9489bcc68e18b5
+      internalID: 1840513219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_27
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 965
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a710e4187c359784bbe61ce20239cde4
+      internalID: 1131895778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_28
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 965
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec1d4cd2a63d494aba2149b3ee7f1af
+      internalID: 678714196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_29
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 965
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca53e76d7b78af449bc626d6d7c29e1
+      internalID: -397815927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_30
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 965
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dccb95240e43a74592d2292ebd82e98
+      internalID: -1917667834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_31
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 919
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef712fd14226a9d4a987eadea9cacfda
+      internalID: 1140851162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_32
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 919
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713fb502d360f4d4f812e53dd953a861
+      internalID: 2124291776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_33
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 916
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9227c8218fbc6aa4fa0d3acf7b4727fb
+      internalID: 935775449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_34
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 916
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e9a336ffce7684bb7fd7530e183f78
+      internalID: -1767852537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_35
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 892
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bcb2ea8a0af764fb713da1fc0643d2
+      internalID: 1628151577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_36
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 892
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef944874f0c1302469ed5cc9652ac4a0
+      internalID: 641180977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_37
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 892
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185a91aa7cc288c42a73bd322a850749
+      internalID: -1508926270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_38
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 853
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88e01f64931e29478dd4a1ad7080a08
+      internalID: -704595618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_39
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 853
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bc65576723b8e42a151418e1cf7d30
+      internalID: -746708309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_40
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 853
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676fb7ab2cc93734bbb8611a6c96018d
+      internalID: -1044916211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_41
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 853
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e9e847606a73a45813060a25bd9ffd
+      internalID: 1964853778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 802
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fb778dd1251c840a184bb02ace719a
+      internalID: 1912925760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_43
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 803
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee7f4801095d1d4da86b79d8656c790
+      internalID: 190957627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_44
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 802
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d138652613f38458b055a7781c43fd
+      internalID: 417310714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_45
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 802
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdbcf132dcabd54db4ef1c7fd40645c
+      internalID: -1868473073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_46
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 774
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b611832dda632394d8647c32ae7eed82
+      internalID: 1503841921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_47
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 774
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0be1887ca9c8447a91ccd3ce4fc13f
+      internalID: -2136956021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_48
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 774
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5620f7d9753fd6b48a743ac4b31e45c2
+      internalID: -134917659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_49
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 735
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297da644a7e5d364cb15354f7e05f568
+      internalID: -348734053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_50
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 735
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748f1e1f09e393742b34dca3bae731aa
+      internalID: 2116166706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_51
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 735
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0f19b6b0d44fa448a2fc9c9a38d377
+      internalID: 2080121739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_52
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 735
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c08fdd903142284981e830739a9fce5
+      internalID: -37608087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_53
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 683
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfc04e51c05f024c913c30a13940329
+      internalID: 739498051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_54
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 684
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd2112dee05ac342b1e6964a7856093
+      internalID: -950970584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_55
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 683
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25e4ea630d5f8042bfc6823d1ca74dd
+      internalID: -112962771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_56
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 684
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6176f11042fa0ca40b05d5f5c5f14b9d
+      internalID: -1693146618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_57
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 659
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a971e55fc139042825085051300ef4
+      internalID: 1753479325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_58
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 659
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2913e69578663f4498c61c70f800d0a0
+      internalID: -957359985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_59
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 659
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfe2cc1fbed8e2478c6ce81d17672fb
+      internalID: 2142526347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_60
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 620
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d8d5982d82dc14da3b42ac7a7a5d8c
+      internalID: -880322773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_61
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 620
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361faa269b3e5ad418bc3d5d26541e32
+      internalID: 815878553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_62
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 620
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84289253fa717524b8df752489e7fb84
+      internalID: -800457848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_63
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 620
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c484076eadfae4da4f87b922f8eab0
+      internalID: 1933345605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_64
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 577
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6d11062037d0e4f943debd213df935
+      internalID: -617635065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_65
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 577
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d9bc7f09573424383614968ff2696c
+      internalID: 1748558328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_66
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 574
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4d6a0ab15018e4b9a335b5a29de049
+      internalID: -22121452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_67
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 573
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac5c540a9eafcc4abab16474aa20a80
+      internalID: 1561805964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_68
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 545
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e02ffca04483f40b4b5ebef2eca7b5
+      internalID: 739504975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_69
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 545
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e16e85193da8404496d5629329a0500
+      internalID: -455569154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_70
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 546
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f620e7ccaf51743ac2071094e797f5
+      internalID: 336302241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_71
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 507
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff9dbdcae18a6c47800ff191df0a36e
+      internalID: 168207788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_72
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 507
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aea8ed2060a9ef44a260ec1d48b23f7
+      internalID: -286207714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_73
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 507
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a89bf0170ec59644ab51976d1c618ee
+      internalID: -1825004309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_74
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 507
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f560276590d4c240ad21d01a30bb95d
+      internalID: -915403222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_75
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 466
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566e5f075ae626f46a06c018daeff752
+      internalID: 955493063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_76
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 465
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6aff4be27953a34d8ac342300eddae0
+      internalID: 1301145994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_77
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 465
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c114caf0502cce4abcc0f4a72e01a90
+      internalID: 2024765893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_78
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 466
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792fb828324d1d04da71301759a81c4d
+      internalID: 1064335892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_79
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 443
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb2aa33d7f98894cba1db4385875f98
+      internalID: -1582226993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_80
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 443
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9895153f7773c45bd4c01108dc5136
+      internalID: 1924478907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_81
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 443
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7ad87b16c44ba459f6e821a5162393
+      internalID: -1514177555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_82
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 404
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ab13d5918a2f348bb89ae344d87f58
+      internalID: 599744688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_83
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 404
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d89c48c26dba0a4ca890c122e7084bb
+      internalID: -1612418019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_84
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 404
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9265d519bfe4d5c46aceaf20732a972c
+      internalID: -247344825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_85
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 404
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bc9fc927f2aa145af789e96ab4b817
+      internalID: 1186547704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_86
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 364
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c436f862cdc4ab34fb454dadf5824433
+      internalID: -601533332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_87
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 364
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfe8b6e6ae622c46b5609c0e51a8a57
+      internalID: 1085038099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_88
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 363
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9223054c9a687314c823749161268878
+      internalID: -835906922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_89
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 363
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6484dcffb6561bd4ba6cfde412abdbc0
+      internalID: 958905891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_90
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 336
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e852ffb186dc0cc47b329663ed5de49a
+      internalID: 1596849379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_91
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 336
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc4310754d80a74ebde8482f41e28ae
+      internalID: 848008947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_92
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 336
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb53e9ae3681a8745ba39edd08a51a8a
+      internalID: -1737597794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_93
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 297
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1d872377dee504394322fd108bb614
+      internalID: -1784395060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_94
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 297
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ac93c3d5c92094db80d19a9d346832
+      internalID: 897583308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_95
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 297
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ceb9b24ce0ed6c4e87dcea7c10773e1
+      internalID: -1988817288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_96
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 298
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0180777d0fb825a48a2b92e91fe22aaf
+      internalID: 567572633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_97
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 245
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b598c5f9c813fb4fa90a2af06b5cd39
+      internalID: 1012205090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_98
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 247
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e062297535d7eb54495a85d0caed25bc
+      internalID: 1404389917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_99
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 245
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd7126c084a3d94bab5a72bb3aa965c
+      internalID: -1375720020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_100
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 245
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07768f9e08428a442ad328f27c4da557
+      internalID: -490344339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_101
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 196
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0761c9709205e4497b9ab0d68d8014
+      internalID: 204060675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_102
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 197
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33793fcac2877da46a3b5eb470b19f5a
+      internalID: 1389446530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_103
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 209
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea50579b6cc9e4b47b8fcff49dfbf012
+      internalID: -858739102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_104
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 207
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4df33aee86e284cbf3c5acaf23f618
+      internalID: 1707271930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_105
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 207
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fe39d41a2bef545a1bf400635ad042
+      internalID: 722187894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_106
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 150
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6575f21512975364297896b5340d23a0
+      internalID: -554013650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_107
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 151
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71c30658faad8f44bd790bcb3e15e91
+      internalID: 428376446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_108
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 149
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234380832ef00db4593e09e5132c42bb
+      internalID: 1053993096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bosses-not-nen_109
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 215
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584648a421002db4d90a5c758c9b8555
+      internalID: 439184106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bosses-not-nen_0: 1244803400
+      bosses-not-nen_1: 91276859
+      bosses-not-nen_10: 1153973886
+      bosses-not-nen_100: -490344339
+      bosses-not-nen_101: 204060675
+      bosses-not-nen_102: 1389446530
+      bosses-not-nen_103: -858739102
+      bosses-not-nen_104: 1707271930
+      bosses-not-nen_105: 722187894
+      bosses-not-nen_106: -554013650
+      bosses-not-nen_107: 428376446
+      bosses-not-nen_108: 1053993096
+      bosses-not-nen_109: 439184106
+      bosses-not-nen_11: -1458744887
+      bosses-not-nen_12: 514620808
+      bosses-not-nen_13: 1483226292
+      bosses-not-nen_14: -696915909
+      bosses-not-nen_15: 1797189291
+      bosses-not-nen_16: -470030826
+      bosses-not-nen_17: -1939260355
+      bosses-not-nen_18: -173143530
+      bosses-not-nen_19: 1731620402
+      bosses-not-nen_2: 297733215
+      bosses-not-nen_20: 713489493
+      bosses-not-nen_21: 580642013
+      bosses-not-nen_22: -700614514
+      bosses-not-nen_23: 136784471
+      bosses-not-nen_24: -2046549624
+      bosses-not-nen_25: 629195229
+      bosses-not-nen_26: 1840513219
+      bosses-not-nen_27: 1131895778
+      bosses-not-nen_28: 678714196
+      bosses-not-nen_29: -397815927
+      bosses-not-nen_3: -1083357407
+      bosses-not-nen_30: -1917667834
+      bosses-not-nen_31: 1140851162
+      bosses-not-nen_32: 2124291776
+      bosses-not-nen_33: 935775449
+      bosses-not-nen_34: -1767852537
+      bosses-not-nen_35: 1628151577
+      bosses-not-nen_36: 641180977
+      bosses-not-nen_37: -1508926270
+      bosses-not-nen_38: -704595618
+      bosses-not-nen_39: -746708309
+      bosses-not-nen_4: 1154778516
+      bosses-not-nen_40: -1044916211
+      bosses-not-nen_41: 1964853778
+      bosses-not-nen_42: 1912925760
+      bosses-not-nen_43: 190957627
+      bosses-not-nen_44: 417310714
+      bosses-not-nen_45: -1868473073
+      bosses-not-nen_46: 1503841921
+      bosses-not-nen_47: -2136956021
+      bosses-not-nen_48: -134917659
+      bosses-not-nen_49: -348734053
+      bosses-not-nen_5: 1000409868
+      bosses-not-nen_50: 2116166706
+      bosses-not-nen_51: 2080121739
+      bosses-not-nen_52: -37608087
+      bosses-not-nen_53: 739498051
+      bosses-not-nen_54: -950970584
+      bosses-not-nen_55: -112962771
+      bosses-not-nen_56: -1693146618
+      bosses-not-nen_57: 1753479325
+      bosses-not-nen_58: -957359985
+      bosses-not-nen_59: 2142526347
+      bosses-not-nen_6: -1151210436
+      bosses-not-nen_60: -880322773
+      bosses-not-nen_61: 815878553
+      bosses-not-nen_62: -800457848
+      bosses-not-nen_63: 1933345605
+      bosses-not-nen_64: -617635065
+      bosses-not-nen_65: 1748558328
+      bosses-not-nen_66: -22121452
+      bosses-not-nen_67: 1561805964
+      bosses-not-nen_68: 739504975
+      bosses-not-nen_69: -455569154
+      bosses-not-nen_7: -1277736166
+      bosses-not-nen_70: 336302241
+      bosses-not-nen_71: 168207788
+      bosses-not-nen_72: -286207714
+      bosses-not-nen_73: -1825004309
+      bosses-not-nen_74: -915403222
+      bosses-not-nen_75: 955493063
+      bosses-not-nen_76: 1301145994
+      bosses-not-nen_77: 2024765893
+      bosses-not-nen_78: 1064335892
+      bosses-not-nen_79: -1582226993
+      bosses-not-nen_8: 256830262
+      bosses-not-nen_80: 1924478907
+      bosses-not-nen_81: -1514177555
+      bosses-not-nen_82: 599744688
+      bosses-not-nen_83: -1612418019
+      bosses-not-nen_84: -247344825
+      bosses-not-nen_85: 1186547704
+      bosses-not-nen_86: -601533332
+      bosses-not-nen_87: 1085038099
+      bosses-not-nen_88: -835906922
+      bosses-not-nen_89: 958905891
+      bosses-not-nen_9: -243915663
+      bosses-not-nen_90: 1596849379
+      bosses-not-nen_91: 848008947
+      bosses-not-nen_92: -1737597794
+      bosses-not-nen_93: -1784395060
+      bosses-not-nen_94: 897583308
+      bosses-not-nen_95: -1988817288
+      bosses-not-nen_96: 567572633
+      bosses-not-nen_97: 1012205090
+      bosses-not-nen_98: 1404389917
+      bosses-not-nen_99: -1375720020
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
