@@ -1,7 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class PlayerBullet : MonoBehaviour
 {
+   
+
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float lifeTime = 0.5f;
     private Rigidbody2D rb;
