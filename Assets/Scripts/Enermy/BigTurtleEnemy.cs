@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiniEnermyNTSan : MonoBehaviour
+public class BigTurtleEnemy : MonoBehaviour
 {
     public float speed = 2f; // Tốc độ di chuyển
-    public float moveDistance = 4f; // Khoảng cách di chuyển
+    public float moveDistance = 3f; // Khoảng cách di chuyển
     private Vector3 startPos;
     private bool movingRight = true;
 
@@ -25,7 +25,6 @@ public class MiniEnermyNTSan : MonoBehaviour
             ChangeDirection();
         }
     }
-
 
     void ChangeDirection()
     {
