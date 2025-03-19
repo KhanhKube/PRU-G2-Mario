@@ -218,6 +218,7 @@ Transform:
   - {fileID: 728667589}
   - {fileID: 570878072}
   m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &106558065
@@ -9225,6 +9226,7 @@ MonoBehaviour:
   CoinNum: 0
   coins: []
   CoinText: {fileID: 729345918}
+  popupPanel: {fileID: 729345916}
   popupPanel: {fileID: 0}
   PopupGameOver: {fileID: 2106418126}
   PopupGameWin: {fileID: 1152765854}
