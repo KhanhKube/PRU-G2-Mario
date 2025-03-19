@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 15f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private int maxAmmo = 10;  // Số đạn tối đa
+    public int maxAmmo = 10;  // Số đạn tối đa
     private int currentAmmo;
 
     private Animator animator;
@@ -27,8 +27,13 @@ public class PlayerController : MonoBehaviour
     public int GetCurrentAmmo() { return currentAmmo; }
     public int GetMaxAmmo() { return maxAmmo; }
 
-    private void Awake()
+    public void Awake()
     {
+        if (PlayerPrefs.HasKey("MaxAmmo"))
+        {
+            maxAmmo = PlayerPrefs.GetInt("MaxAmmo");
+        }
+       
         healthManager = GetComponent<HealthManager>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -36,9 +41,16 @@ public class PlayerController : MonoBehaviour
         audioManager = FindAnyObjectByType<AudioManager>();
 
         currentAmmo = maxAmmo;
+      
     }
 
- 
+    void Start()
+    {
+        
+        PlayerPrefs.SetInt("MaxAmmo", maxAmmo);
+        PlayerPrefs.Save();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.J) && Time.time > nextFireTime && currentAmmo > 0)  // Fire with J

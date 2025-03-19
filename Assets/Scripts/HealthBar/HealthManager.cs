@@ -13,10 +13,15 @@ public class HealthManager : MonoBehaviour
 
     private void Start()
     {
+        if (PlayerPrefs.HasKey("MaxHealth"))
+        {
+            maxHealth = PlayerPrefs.GetInt("MaxHealth");
+        }
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         PlayerPrefs.SetInt("MaxHealth", maxHealth);
         PlayerPrefs.Save();
+       
     }
 
     private void Update()

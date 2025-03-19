@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     
 
     public int CoinNum = 0;
+    public int CurrentCoin;
     public GameObject[] coins;
     
     public Text CoinText;
@@ -25,12 +26,18 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        if (PlayerPrefs.HasKey("Coin"))
+        {
+            CurrentCoin = PlayerPrefs.GetInt("Coin");
+            Debug.Log("CurrentCoin: " + CurrentCoin);
+        }
+        CurrentCoin += CoinNum;
         popupPanel.SetActive(false);
         PopupGameOver.SetActive(false);
         PopupGameWin.SetActive(false );
         UpdateUI();
         coins = GameObject.FindGameObjectsWithTag("Coin");
-        PlayerPrefs.SetInt("Coin", CoinNum);
+        PlayerPrefs.SetInt("Coin", CurrentCoin);
         PlayerPrefs.Save();
     }
 
@@ -47,7 +54,8 @@ public class GameManager : MonoBehaviour
         audioManager.PlayCoinSound();
         Destroy(coin);
         UpdateUI();
-        if (CoinNum > 5)
+        
+        if (CoinNum > 1)
         {
             CheckGameWin();
         }
@@ -57,7 +65,10 @@ public class GameManager : MonoBehaviour
 
     public void CheckGameWin()
     {
-       PopupGameWin.SetActive(true);
+        CurrentCoin += CoinNum;
+        PlayerPrefs.SetInt("Coin", CurrentCoin);
+        PlayerPrefs.Save();
+        PopupGameWin.SetActive(true);
         Time.timeScale = 0f;
 
     }
@@ -71,7 +82,7 @@ public class GameManager : MonoBehaviour
     }
     public void UpdateUI()
     {
-        CoinText.text = $"{CoinNum}";
+        CoinText.text = $"{CurrentCoin+CoinNum}";
     }
 
     public void StopGame()
@@ -92,22 +103,33 @@ public class GameManager : MonoBehaviour
     }
     public void GoToMainMenu()
     {
+
+       
+
         Time.timeScale = 1f; // Đảm bảo game không bị dừng
         SceneManager.LoadScene("MainScene"); // Thay bằng tên scene menu chính
+        PlayerPrefs.Save();
+
     }
     public void NextMap_Island()
     {
         Time.timeScale = 1f; // Đảm bảo game không bị dừng
         SceneManager.LoadScene("Island");
+        PlayerPrefs.Save();
+
     }
     public void NextMap_SkyCity()
     {
         Time.timeScale = 1f; // Đảm bảo game không bị dừng
         SceneManager.LoadScene("Sky_City");
+        PlayerPrefs.Save();
+
     }
     public void NextMap_NuiLua()
     {
         Time.timeScale = 1f; // Đảm bảo game không bị dừng
         SceneManager.LoadScene("Nui_Lua");
+        PlayerPrefs.Save();
+
     }
 }
