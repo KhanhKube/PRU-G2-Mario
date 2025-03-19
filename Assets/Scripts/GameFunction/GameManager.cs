@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     
     public Text CoinText;
     private AudioManager audioManager;
-     public GameObject popupPanel;
+    public GameObject popupPanel;
     public GameObject PopupGameOver;
     public GameObject PopupGameWin;
     private PlayerController player; 
