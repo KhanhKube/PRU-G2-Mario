@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     public int maxAmmo = 10;  // Số đạn tối đa
     private int currentAmmo;
-
+    public Boolean isWin = false;
     private Animator animator;
     private bool isGrounded;
     private Rigidbody2D rb;
@@ -153,6 +154,11 @@ public class PlayerController : MonoBehaviour
             // Gọi hàm nhảy lại của Player sau khi đạp trúng
             JumpAfterStomp();
         }
+        // Kiểm tra nếu Player chạm vào ItemsWin
+        if (collision.CompareTag("Key"))
+        {
+            isWin = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -172,7 +178,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+ 
     private void JumpAfterStomp()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
