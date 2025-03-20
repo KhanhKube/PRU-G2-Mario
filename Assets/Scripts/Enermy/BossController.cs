@@ -12,6 +12,8 @@ public class BossController : MonoBehaviour
     private Vector3 targetPosition;
     public float bulletSpeed = 10f;
     private Animator animator;
+    public GameObject keyPrefab; // Gán Key Prefab trong Inspector
+    public Transform dropPoint; // Điểm rơi của Key (có thể là Boss)
     void Start()
     {
         GetNewTargetPosition();
@@ -80,5 +82,19 @@ public class BossController : MonoBehaviour
     void GetNewTargetPosition()
     {
         
+    }
+    
+    private void OnDestroy()
+    {
+        if (keyPrefab != null)
+        {
+            GameObject key = Instantiate(keyPrefab, dropPoint.position, Quaternion.identity);
+            Rigidbody2D rb = key.GetComponent<Rigidbody2D>();
+
+            if (rb != null)
+            {
+                rb.velocity = new Vector2(Random.Range(-2f, 2f), 5f); // Key rơi xuống một cách ngẫu nhiên
+            }
+        }
     }
 }

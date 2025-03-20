@@ -11,6 +11,7 @@ TagManager:
   - HeadEnemy
   - HealthIcon
   - AmmoPack
+  - Boss
   layers:
   - Default
   - TransparentFX
