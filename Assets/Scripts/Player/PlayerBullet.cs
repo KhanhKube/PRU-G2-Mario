@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlayerBullet : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float lifeTime = 0.5f;
+    public Boolean isBossDestroy = false;
+    public int countBossTakeDame = 0;
     private Rigidbody2D rb;
     private ObjectPool objectPool;
     void Awake()
@@ -40,6 +43,16 @@ public class PlayerBullet : MonoBehaviour
 
             Destroy(collision.gameObject);
         }
+        if (collision.CompareTag("Boss"))
+        {
+            countBossTakeDame += 1;
+            Debug.Log(countBossTakeDame);
+            if(countBossTakeDame == 10)
+            {
+                isBossDestroy = true;
+            }
+        }
+
     }
     private void ReturnToPool()
     {

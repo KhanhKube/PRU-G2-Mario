@@ -14,6 +14,7 @@ public class BossController : MonoBehaviour
     private Animator animator;
     public GameObject keyPrefab; // Gán Key Prefab trong Inspector
     public Transform dropPoint; // Điểm rơi của Key (có thể là Boss)
+   
     void Start()
     {
         GetNewTargetPosition();
@@ -30,6 +31,7 @@ public class BossController : MonoBehaviour
         {
             //Patrol();
         }
+     
     }
 
     bool IsPlayerInBossArea()
@@ -97,4 +99,5 @@ public class BossController : MonoBehaviour
             }
         }
     }
+  
 }

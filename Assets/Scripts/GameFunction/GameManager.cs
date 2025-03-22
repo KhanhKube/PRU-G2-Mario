@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public int CoinNum = 0;
     public int CurrentCoin;
+    public float fallThreshold = -10f; // Giới hạn khi rơi xuống (tuỳ chỉnh theo map)
     public GameObject[] coins;
     
     public Text CoinText;
@@ -44,10 +45,22 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (player.IsDestroyed()) { CheckGameOver(); }
+      
+        if (player.IsDestroyed())
+        {
+            CheckGameOver();
+        }
+
         if (player.isWin)
         {
             CheckGameWin();
+        }
+
+        // Kiểm tra nếu nhân vật rơi ra khỏi map
+        if (player.transform.position.y < fallThreshold)
+        {
+            Debug.Log("Player fell off the map!");
+            CheckGameOver();
         }
 
     }
