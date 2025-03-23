@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
@@ -15,10 +16,18 @@ public class BossController : MonoBehaviour
     public GameObject keyPrefab; // Gán Key Prefab trong Inspector
     public Transform dropPoint; // Điểm rơi của Key (có thể là Boss)
    
+
+    public Transform[] waypoints; // Danh sách điểm đến
+    public float speed = 3f; // Tốc độ di chuyển
+    private Transform targetPoint; // Điểm đến hiện tại
+    private int currentIndex = -1;
+
     void Start()
     {
         GetNewTargetPosition();
         animator = GetComponent<Animator>();
+        if (waypoints.Length > 0)
+            ChooseNextPoint();
     }
 
     void Update()
@@ -31,7 +40,31 @@ public class BossController : MonoBehaviour
         {
             //Patrol();
         }
-     
+        
+        if (targetPoint != null)
+        {
+            // Di chuyển quái đến điểm tiếp theo
+            transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
+            
+                Debug.Log(transform.position);
+                Debug.Log(targetPoint.position);
+            // Nếu đã đến gần điểm, chọn điểm mới
+            if (Vector2.Distance(transform.position, targetPoint.position) < 0.2f)
+            {
+                ChooseNextPoint();
+            }
+        }
+    }
+
+    void ChooseNextPoint()
+    {
+        int newIndex;
+        do
+        {
+            newIndex = UnityEngine.Random.Range(0, waypoints.Length);
+        } while (newIndex == currentIndex); // Tránh trùng điểm liên tiếp
+        currentIndex = newIndex;
+        targetPoint = waypoints[currentIndex];
     }
 
     bool IsPlayerInBossArea()
@@ -95,7 +128,7 @@ public class BossController : MonoBehaviour
 
             if (rb != null)
             {
-                rb.velocity = new Vector2(Random.Range(-2f, 2f), 5f); // Key rơi xuống một cách ngẫu nhiên
+                rb.velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), 5f); // Key rơi xuống một cách ngẫu nhiên
             }
         }
     }
