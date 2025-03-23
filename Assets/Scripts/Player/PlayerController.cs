@@ -24,12 +24,16 @@ public class PlayerController : MonoBehaviour
     private HealthManager healthManager;
     //private GameManager gameManager;
     private AudioManager audioManager;
+    //shield
+    private ShieldController shieldController;
 
     public int GetCurrentAmmo() { return currentAmmo; }
     public int GetMaxAmmo() { return maxAmmo; }
 
     public void Awake()
     {
+        shieldController = GetComponent<ShieldController>();
+
         if (PlayerPrefs.HasKey("MaxAmmo"))
         {
             maxAmmo = PlayerPrefs.GetInt("MaxAmmo");
@@ -40,7 +44,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //gameManager = FindAnyObjectByType<GameManager>();
         audioManager = FindAnyObjectByType<AudioManager>();
-
         currentAmmo = maxAmmo;
       
     }
@@ -126,51 +129,60 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") )
-        {
-
-            if (healthManager != null)
-            {
-                healthManager.TakeDamage(20);
-
-                // Chỉ hủy người chơi nếu máu giảm xuống 0
-                if (healthManager.currentHealth <= 0)
-                {
-                    Destroy(gameObject);
-                }
-            }
-        }
-
+        // Xử lý các va chạm không liên quan đến sát thương
         if (collision.CompareTag("HeadEnemy"))
         {
             // Lấy GameObject cha của HeadEnemy (Enemy)
             GameObject enemyParent = collision.transform.parent.gameObject;
-
             if (enemyParent != null)
             {
                 Destroy(enemyParent); // Hủy cả Enemy
             }
-
-            // Gọi hàm nhảy lại của Player sau khi đạp trúng
             JumpAfterStomp();
+            return;
         }
-        // Kiểm tra nếu Player chạm vào ItemsWin
+
         if (collision.CompareTag("Key"))
         {
             isWin = true;
+            return;
         }
 
-
-        if (collision.CompareTag("Boss"))
+        // Kiểm tra khiên cho các va chạm gây sát thương
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Boss") || collision.CompareTag("Trap"))
         {
+            // Kiểm tra xem khiên có đang hoạt động không
+            if (shieldController != null && shieldController.IsShieldActive())
+            {
+                Debug.Log("Khiên đã chặn sát thương từ: " + collision.tag);
+
+                // bossđẩy người chơi ra
+                if (collision.CompareTag("Boss"))
+                {
+                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
+                    rb.velocity = knockback;
+                }
+
+                return; // Không gây sát thương nếu khiên đang hoạt động
+            }
+
+            // Xử lý sát thương khi không có khiên
             if (healthManager != null)
             {
-                healthManager.TakeDamage(30);
+                int damageAmount = 20; // Mặc định cho Enemy và Trap
 
-                // Đẩy Player ra khỏi Boss khi chạm
-                Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
-                rb.velocity = knockback;
+                if (collision.CompareTag("Boss"))
+                {
+                    damageAmount = 30; 
 
+                    // Đẩy Player ra khỏi Boss khi chạm
+                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
+                    rb.velocity = knockback;
+                }
+
+                healthManager.TakeDamage(damageAmount);
+
+                // Kiểm tra nếu máu giảm xuống 0
                 if (healthManager.currentHealth <= 0)
                 {
                     Destroy(gameObject);
@@ -178,7 +190,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
     //    if (collision.gameObject.CompareTag("Enemy"))
