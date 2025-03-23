@@ -7,8 +7,8 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
-    
 
+    private bool isGameOver = false;
     public int CoinNum = 0;
     public int CurrentCoin;
     public float fallThreshold = -10f; // Giới hạn khi rơi xuống (tuỳ chỉnh theo map)
@@ -45,10 +45,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-      
+        if (isGameOver || player == null) return;
+
         if (player.IsDestroyed())
         {
             CheckGameOver();
+            isGameOver = true;
+            return;
         }
 
         if (player.isWin)
@@ -61,6 +64,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Player fell off the map!");
             CheckGameOver();
+            isGameOver = true; // Đánh dấu game đã kết thúc để dừng Update()
         }
 
     }

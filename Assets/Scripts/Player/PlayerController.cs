@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Rigidbody2D rb;
     private HealthManager healthManager;
-    //private GameManager gameManager;
+    private GameManager gameManager;
     private AudioManager audioManager;
     //shield
     private ShieldController shieldController;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         healthManager = GetComponent<HealthManager>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        //gameManager = FindAnyObjectByType<GameManager>();
+        gameManager = FindAnyObjectByType<GameManager>();
         audioManager = FindAnyObjectByType<AudioManager>();
         currentAmmo = maxAmmo;
       
@@ -129,7 +129,35 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Xử lý các va chạm không liên quan đến sát thương
+// <<<<<<< hai-Boss
+//         // Xử lý các va chạm không liên quan đến sát thương
+// =======
+//         if (collision.CompareTag("Enemy") )
+//         {
+
+//             if (healthManager != null)
+//             {
+//                 healthManager.TakeDamage(20);
+
+//                 // Chỉ hủy người chơi nếu máu giảm xuống 0
+//                 if (healthManager.currentHealth <= 0)
+//                 {
+//                     Destroy(gameObject);
+//                     gameManager.CheckGameOver();
+//                 }
+//             }
+//             else
+//             {
+//                 Debug.Log("Player va chạm với Enemy!");
+//                 // Nếu Player không có healthManager, chỉ cần Destroy
+//                 Destroy(gameObject);
+//                 gameManager.CheckGameOver();
+//             }
+
+            
+       
+
+// >>>>>>> develop
         if (collision.CompareTag("HeadEnemy"))
         {
             // Lấy GameObject cha của HeadEnemy (Enemy)
