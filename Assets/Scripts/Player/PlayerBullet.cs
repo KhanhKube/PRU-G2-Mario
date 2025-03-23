@@ -45,12 +45,17 @@ public class PlayerBullet : MonoBehaviour
         }
         if (collision.CompareTag("Boss"))
         {
-            countBossTakeDame += 1;
-            Debug.Log(countBossTakeDame);
-            if(countBossTakeDame == 10)
+            var bossHealth = collision.GetComponent<BossController>();
+            if (bossHealth != null)
             {
-                isBossDestroy = true;
+                bossHealth.DamageBoss(10);
             }
+            //countBossTakeDame += 1;
+            //Debug.Log(countBossTakeDame);
+            //if(countBossTakeDame == 10)
+            //{
+            //    isBossDestroy = true;
+            //}
         }
 
     }

@@ -15,7 +15,9 @@ public class BossController : MonoBehaviour
     private Animator animator;
     public GameObject keyPrefab; // Gán Key Prefab trong Inspector
     public Transform dropPoint; // Điểm rơi của Key (có thể là Boss)
-   
+    public int curHealth = 0;
+    public int maxHealth = 100;
+    public BossHealthBar healthBar;
 
     public Transform[] waypoints; // Danh sách điểm đến
     public float speed = 3f; // Tốc độ di chuyển
@@ -24,6 +26,7 @@ public class BossController : MonoBehaviour
 
     void Start()
     {
+        curHealth = maxHealth;
         GetNewTargetPosition();
         animator = GetComponent<Animator>();
         if (waypoints.Length > 0)
@@ -53,6 +56,19 @@ public class BossController : MonoBehaviour
             {
                 ChooseNextPoint();
             }
+        }
+    }
+
+    public void DamageBoss(int damage)
+    {
+        curHealth -= damage;
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(curHealth);
+        }
+        if (curHealth <= 0)
+        {
+            gameObject.SetActive(false); // Ẩn boss khi chết
         }
     }
 
