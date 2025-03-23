@@ -12,6 +12,8 @@ TagManager:
   - HealthIcon
   - AmmoPack
   - Boss
+  - BossBullet
+  - Ground
   layers:
   - Default
   - TransparentFX

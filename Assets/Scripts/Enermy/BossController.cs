@@ -38,6 +38,7 @@ public class BossController : MonoBehaviour
         if (IsPlayerInBossArea())
         {
             AttackPlayer();
+            ChasePlayer();
         }
         else
         {
@@ -148,5 +149,31 @@ public class BossController : MonoBehaviour
             }
         }
     }
-  
+
+    // lưu kích thước gốc của Boss
+    private Vector3 originalScale;
+    // Boss Di chuyển theo player 
+    float stopDistance = 6f;
+    void ChasePlayer()
+    {
+        if (player != null)
+        {
+            //transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            float distance = Vector3.Distance(transform.position, player.position);
+
+            if (distance > stopDistance)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            }
+
+            // Xoay mặt Boss theo hướng Player (nếu cần)
+            // Chỉ lật theo trục X, không làm thay đổi kích thước Y, Z
+            if (player.position.x > transform.position.x)
+                transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
+            else
+                transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
+        
+        }
+    }
+
 }
