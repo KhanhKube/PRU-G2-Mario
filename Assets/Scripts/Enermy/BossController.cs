@@ -14,7 +14,6 @@ public class BossController : MonoBehaviour
     public float bulletSpeed = 10f;
     private Animator animator;
     public GameObject keyPrefab; // Gán Key Prefab trong Inspector
-    public Transform dropPoint; // Điểm rơi của Key (có thể là Boss)
     public int curHealth = 0;
     public int maxHealth = 100;
     public BossHealthBar healthBar;
@@ -38,7 +37,6 @@ public class BossController : MonoBehaviour
         if (IsPlayerInBossArea())
         {
             AttackPlayer();
-            ChasePlayer();
         }
         else
         {
@@ -69,7 +67,7 @@ public class BossController : MonoBehaviour
         }
         if (curHealth <= 0)
         {
-            gameObject.SetActive(false); // Ẩn boss khi chết
+            Destroy(gameObject);
         }
     }
 
@@ -135,45 +133,24 @@ public class BossController : MonoBehaviour
     {
         
     }
-    
+
     private void OnDestroy()
     {
         if (keyPrefab != null)
         {
-            GameObject key = Instantiate(keyPrefab, dropPoint.position, Quaternion.identity);
+            // Key sẽ xuất hiện ngay tại vị trí của Boss
+            GameObject key = Instantiate(keyPrefab, transform.position, Quaternion.identity);
             Rigidbody2D rb = key.GetComponent<Rigidbody2D>();
 
             if (rb != null)
             {
-                rb.velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), 5f); // Key rơi xuống một cách ngẫu nhiên
+                rb.velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), 5f);
             }
         }
     }
+ 
+    
 
-    // lưu kích thước gốc của Boss
-    private Vector3 originalScale;
-    // Boss Di chuyển theo player 
-    float stopDistance = 6f;
-    void ChasePlayer()
-    {
-        if (player != null)
-        {
-            //transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-            float distance = Vector3.Distance(transform.position, player.position);
 
-            if (distance > stopDistance)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-            }
-
-            // Xoay mặt Boss theo hướng Player (nếu cần)
-            // Chỉ lật theo trục X, không làm thay đổi kích thước Y, Z
-            if (player.position.x > transform.position.x)
-                transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
-            else
-                transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
-        
-        }
-    }
 
 }
