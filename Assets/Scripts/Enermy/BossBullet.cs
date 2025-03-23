@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class BossBullet : MonoBehaviour
 {
-    public int damageAmount = 20;
+    public int damage = 30;        // Sát thương của đạn
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+    }
+
+    // Khi đạn va chạm
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Kiểm tra nếu va chạm với Player
+        if (collision.CompareTag("Player"))
+        {
+            var healthManager = collision.GetComponent<HealthManager>();
+            if (healthManager != null)
+            {
+                healthManager.TakeDamage(damage); // Gây sát thương cho player
+            }
+            Destroy(gameObject); // Hủy đạn sau khi va chạm
+        }
     }
    
 }
