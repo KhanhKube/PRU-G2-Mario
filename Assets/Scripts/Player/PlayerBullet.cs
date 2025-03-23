@@ -51,9 +51,11 @@ public class PlayerBullet : MonoBehaviour
             //    isBossDestroy = true;
             //}
         }
+    }
 
     private void ReturnToPool()
     {
         gameObject.SetActive(false);
     }
 }
+
