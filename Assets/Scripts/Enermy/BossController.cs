@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
@@ -12,10 +13,24 @@ public class BossController : MonoBehaviour
     private Vector3 targetPosition;
     public float bulletSpeed = 10f;
     private Animator animator;
+    public GameObject keyPrefab; // Gán Key Prefab trong Inspector
+    public Transform dropPoint; // Điểm rơi của Key (có thể là Boss)
+    public int curHealth = 0;
+    public int maxHealth = 100;
+    public BossHealthBar healthBar;
+
+    public Transform[] waypoints; // Danh sách điểm đến
+    public float speed = 3f; // Tốc độ di chuyển
+    private Transform targetPoint; // Điểm đến hiện tại
+    private int currentIndex = -1;
+
     void Start()
     {
+        curHealth = maxHealth;
         GetNewTargetPosition();
         animator = GetComponent<Animator>();
+        if (waypoints.Length > 0)
+            ChooseNextPoint();
     }
 
     void Update()
@@ -28,6 +43,44 @@ public class BossController : MonoBehaviour
         {
             //Patrol();
         }
+        
+        if (targetPoint != null)
+        {
+            // Di chuyển quái đến điểm tiếp theo
+            transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
+            
+                Debug.Log(transform.position);
+                Debug.Log(targetPoint.position);
+            // Nếu đã đến gần điểm, chọn điểm mới
+            if (Vector2.Distance(transform.position, targetPoint.position) < 0.2f)
+            {
+                ChooseNextPoint();
+            }
+        }
+    }
+
+    public void DamageBoss(int damage)
+    {
+        curHealth -= damage;
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(curHealth);
+        }
+        if (curHealth <= 0)
+        {
+            gameObject.SetActive(false); // Ẩn boss khi chết
+        }
+    }
+
+    void ChooseNextPoint()
+    {
+        int newIndex;
+        do
+        {
+            newIndex = UnityEngine.Random.Range(0, waypoints.Length);
+        } while (newIndex == currentIndex); // Tránh trùng điểm liên tiếp
+        currentIndex = newIndex;
+        targetPoint = waypoints[currentIndex];
     }
 
     bool IsPlayerInBossArea()
@@ -81,4 +134,19 @@ public class BossController : MonoBehaviour
     {
         
     }
+    
+    private void OnDestroy()
+    {
+        if (keyPrefab != null)
+        {
+            GameObject key = Instantiate(keyPrefab, dropPoint.position, Quaternion.identity);
+            Rigidbody2D rb = key.GetComponent<Rigidbody2D>();
+
+            if (rb != null)
+            {
+                rb.velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), 5f); // Key rơi xuống một cách ngẫu nhiên
+            }
+        }
+    }
+  
 }

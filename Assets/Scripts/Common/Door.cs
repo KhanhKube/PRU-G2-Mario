@@ -13,7 +13,7 @@ public class Door : MonoBehaviour
 
     void Update()
     {
-        if ((transform.position - player.position).magnitude < 1.0f)
+        if (player != null && (transform.position - player.position).magnitude < 1.0f)
         {
             Debug.Log("Nhấn 'E' để mở cửa");
 

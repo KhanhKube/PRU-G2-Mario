@@ -1,24 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 using UnityEngine.UI;
 
 public class UpgradeStats : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int maxMana = 100;
-    private int gold = 100; // Số vàng ban đầu
+    public int maxHealth;
+    public int maxAmmo;
+    private int gold; // Số vàng ban đầu
 
     public int healthUpgradeCost = 20; // Giá nâng cấp máu
-    public int manaUpgradeCost = 20; // Giá nâng cấp mana
+    public int ammoUpgradeCost = 20; // Giá nâng cấp mana
     public int healthIncreaseAmount = 10; // Mỗi lần nâng cấp, tăng bao nhiêu HP
-    public int manaIncreaseAmount = 10; // Mỗi lần nâng cấp, tăng bao nhiêu MP
+    public int ammoIncreaseAmount = 1; // Mỗi lần nâng cấp, tăng bao nhiêu MP
 
-    public Text healthText;
-    public Text manaText;
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI ammoText;
     public Text healthCostText;
-    public Text manaCostText;
+    public Text ammoCostText;
   
 
 
@@ -26,6 +27,18 @@ public class UpgradeStats : MonoBehaviour
 
     void Start()
     {
+        if (PlayerPrefs.HasKey("MaxHealth"))
+        {
+            maxHealth = PlayerPrefs.GetInt("MaxHealth");
+        }
+        if (PlayerPrefs.HasKey("Coin"))
+        {
+            gold = PlayerPrefs.GetInt("Coin");
+        }
+        if (PlayerPrefs.HasKey("MaxAmmo"))
+        {
+            maxAmmo = PlayerPrefs.GetInt("MaxAmmo");
+        }
         UpdateUI();
     }
 
@@ -37,27 +50,32 @@ public class UpgradeStats : MonoBehaviour
             gold -= healthUpgradeCost;
             maxHealth += healthIncreaseAmount;
             UpdateUI();
-
+            PlayerPrefs.SetInt("MaxHealth", maxHealth);
+            PlayerPrefs.SetInt("Coin", gold); // Cập nhật lại số coin sau khi dùng
+            PlayerPrefs.Save();
         }
     }
 
     public void UpgradeMana()
     {
-        if (gold >= manaUpgradeCost)
+        if (gold >= ammoUpgradeCost)
         {
             Debug.LogWarning("MP+");
-            gold -= manaUpgradeCost;
-            maxMana += manaIncreaseAmount;
+            gold -= ammoUpgradeCost;
+            maxAmmo += ammoIncreaseAmount;
+            PlayerPrefs.SetInt("MaxAmmo", maxAmmo);
+            PlayerPrefs.SetInt("Coin", gold); // Cập nhật lại số coin sau khi dùng
+            PlayerPrefs.Save();
             UpdateUI();
         }
     }
 
     private void UpdateUI()
     {
-        healthText.text = $"HP Max: {maxHealth}";
-        manaText.text = $"MP Max: {maxMana}";
+        healthText.text = $"{maxHealth}";
+        ammoText.text = $"{maxAmmo}";
         goldText.text = $"{gold}";
         healthCostText.text = $"{healthUpgradeCost}";
-        manaCostText.text = $"{manaUpgradeCost}";
+        ammoCostText.text = $"{ammoUpgradeCost}";
     }
 }

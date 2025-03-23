@@ -25,6 +25,7 @@ public class TrapNTSan : MonoBehaviour
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damageAmount);
+             
             }
         }
     }
