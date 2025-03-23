@@ -178,6 +178,16 @@ public class PlayerController : MonoBehaviour
             JumpAfterStomp();
             return;
         }
+        if (collision.CompareTag("Key"))
+        {
+            Debug.Log("Nhấn E để nhặt chìa khóa!");
+
+            
+                isWin = true;
+               
+                Debug.Log("Đã nhặt chìa khóa! Game Win!");
+           
+        }
 
 
     }
@@ -187,17 +197,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Key"))
-        {
-            Debug.Log("Nhấn E để nhặt chìa khóa!");
-
-            if (Input.GetKeyDown(KeyCode.E)) // Yêu cầu nhấn phím E
-            {
-                isWin = true;
-                Destroy(collision.gameObject); // Xóa Key khi nhặt
-                Debug.Log("Đã nhặt chìa khóa! Game Win!");
-            }
-        }
+        
     }
 
 

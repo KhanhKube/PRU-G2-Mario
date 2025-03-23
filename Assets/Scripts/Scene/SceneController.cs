@@ -43,6 +43,10 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("UpdatePlayer"); // Chuyển đến scene cửa hàng
     }
+    public void LoadGuiScene()
+    {
+        SceneManager.LoadScene("GuiGame"); // Chuyển đến scene cửa hàng
+    }
     public void Exit()
     {
         SceneManager.LoadScene("MainScene"); // Chuyển đến scene cửa hàng
