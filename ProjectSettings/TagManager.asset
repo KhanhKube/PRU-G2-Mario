@@ -52,11 +52,17 @@ TagManager:
   - name: Ground
     uniqueID: 1575870613
     locked: 0
+  - name: Enemy
+    uniqueID: 3791737015
+    locked: 0
   - name: Player
     uniqueID: 1372123343
     locked: 0
-  - name: Enemy
-    uniqueID: 3791737015
+  - name: Item
+    uniqueID: 2779044157
+    locked: 0
+  - name: Ui
+    uniqueID: 636308533
     locked: 0
   - name: PlayerBullet
     uniqueID: 3662205493
@@ -64,15 +70,9 @@ TagManager:
   - name: Gun
     uniqueID: 1484748907
     locked: 0
-  - name: Item
-    uniqueID: 2779044157
-    locked: 0
   - name: Enemy
     uniqueID: 2734896443
     locked: 0
   - name: UI
     uniqueID: 2854611585
-    locked: 0
-  - name: Ui
-    uniqueID: 636308533
     locked: 0
