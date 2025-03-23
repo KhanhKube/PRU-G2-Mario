@@ -1,59 +1,48 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Pool;
+﻿using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-   
+    [SerializeField] private float moveSpeed = 10f;  // Tốc độ di chuyển
+    [SerializeField] private float lifeTime = 0.5f;  // Thời gian tồn tại
+    [SerializeField] private int damage = 50;        // Sát thương gây ra
 
-    [SerializeField] private float moveSpeed = 10f;
-    [SerializeField] private float lifeTime = 0.5f;
-    public Boolean isBossDestroy = false;
-    public int countBossTakeDame = 0;
     private Rigidbody2D rb;
     private ObjectPool objectPool;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        objectPool = FindObjectOfType<ObjectPool>(); // Lấy ObjectPool từ scene
     }
 
     void OnEnable()
     {
-        rb.velocity = Vector2.zero;  // Reset velocity
-        Invoke("ReturnToPool", lifeTime);
+        rb.velocity = Vector2.zero;  // Reset vận tốc
+        Invoke(nameof(ReturnToPool), lifeTime); // Trả về Pool sau thời gian
     }
 
     public void Launch(Vector2 direction)
     {
-        //Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.velocity = direction * moveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.CompareTag("Ground"))
-        //{
-        //    ReturnToPool();
-        //}
-        //else 
-        if (collision.CompareTag("Enemy"))
-        {
-
-            Destroy(collision.gameObject);
-        }
         if (collision.CompareTag("Boss"))
         {
-            countBossTakeDame += 1;
-            Debug.Log(countBossTakeDame);
-            if(countBossTakeDame == 10)
+            BossHealth enemyHealth = collision.GetComponent<BossHealth>();
+            if (enemyHealth != null)
             {
-                isBossDestroy = true;
+                enemyHealth.TakeDamage(damage);
             }
+            ReturnToPool();
         }
-
+        else if (collision.CompareTag("Ground"))
+        {
+            ReturnToPool();
+        }
     }
+
     private void ReturnToPool()
     {
         gameObject.SetActive(false);

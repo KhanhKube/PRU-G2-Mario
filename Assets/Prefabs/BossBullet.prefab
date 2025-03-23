@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5874356684915353853}
   m_Layer: 0
   m_Name: BossBullet
-  m_TagString: Enemy
+  m_TagString: BossBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,9 +121,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.06751665, y: -0.024827044}
   serializedVersion: 2
-  m_Radius: 0.24
+  m_Radius: 0.10065496
 --- !u!114 &5874356684915353853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,4 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c9bebb75ddfe548b4a28ac35c265f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 20
+  damage: 20

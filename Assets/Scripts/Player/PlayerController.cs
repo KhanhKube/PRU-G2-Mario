@@ -159,27 +159,45 @@ public class PlayerController : MonoBehaviour
         {
             isWin = true;
         }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
+
+        if (collision.CompareTag("Boss"))
         {
             if (healthManager != null)
             {
-                healthManager.TakeDamage(20);
+                healthManager.TakeDamage(30);
 
-                // Chỉ hủy người chơi nếu máu giảm xuống 0
+                // Đẩy Player ra khỏi Boss khi chạm
+                Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
+                rb.velocity = knockback;
+
                 if (healthManager.currentHealth <= 0)
                 {
                     Destroy(gameObject);
                 }
             }
         }
-        
     }
 
- 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Enemy"))
+    //    {
+    //        if (healthManager != null)
+    //        {
+    //            healthManager.TakeDamage(20);
+
+    //            // Chỉ hủy người chơi nếu máu giảm xuống 0
+    //            if (healthManager.currentHealth <= 0)
+    //            {
+    //                Destroy(gameObject);
+    //            }
+    //        }
+    //    }
+
+    //}
+
+
     private void JumpAfterStomp()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
