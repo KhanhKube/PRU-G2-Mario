@@ -37,11 +37,20 @@ public class PlayerBullet : MonoBehaviour
             }
             ReturnToPool();
         }
-        else if (collision.CompareTag("Ground"))
+        if (collision.CompareTag("Boss"))
         {
-            ReturnToPool();
+            var bossHealth = collision.GetComponent<BossController>();
+            if (bossHealth != null)
+            {
+                bossHealth.DamageBoss(10);
+            }
+            //countBossTakeDame += 1;
+            //Debug.Log(countBossTakeDame);
+            //if(countBossTakeDame == 10)
+            //{
+            //    isBossDestroy = true;
+            //}
         }
-    }
 
     private void ReturnToPool()
     {
