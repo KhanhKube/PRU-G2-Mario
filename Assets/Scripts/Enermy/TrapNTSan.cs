@@ -17,17 +17,17 @@ public class TrapNTSan : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player")) 
-        {
-            var playerHealth = other.GetComponent<HealthManager>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damageAmount);
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Player")) 
+    //    {
+    //        var playerHealth = other.GetComponent<HealthManager>();
+    //        if (playerHealth != null)
+    //        {
+    //            playerHealth.TakeDamage(damageAmount);
              
-            }
-        }
-    }
+    //        }
+    //    }
+    //}
 
 }
