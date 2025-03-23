@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Rigidbody2D rb;
     private HealthManager healthManager;
-    private GameManager gameManager;
     private AudioManager audioManager;
     //shield
     private ShieldController shieldController;
@@ -42,7 +41,6 @@ public class PlayerController : MonoBehaviour
         healthManager = GetComponent<HealthManager>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        gameManager = FindAnyObjectByType<GameManager>();
         audioManager = FindAnyObjectByType<AudioManager>();
         currentAmmo = maxAmmo;
       
@@ -62,7 +60,6 @@ public class PlayerController : MonoBehaviour
             FireBullet();
             nextFireTime = Time.time + fireRate;
         }
-        //if (gameManager.IsGameOver() || gameManager.IsGameWin()) return;
         HandleMovement();
         HandleJump();
         UpdateAnimation();
@@ -129,95 +126,81 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-// <<<<<<< hai-Boss
-//         // Xử lý các va chạm không liên quan đến sát thương
-// =======
-//         if (collision.CompareTag("Enemy") )
-//         {
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Boss") || collision.CompareTag("Trap"))
+        {
+            // Shield Protection Mechanism
+            if (shieldController != null && shieldController.IsShieldActive())
+            {
+                Debug.Log("Shield blocked damage from: " + collision.tag);
 
-//             if (healthManager != null)
-//             {
-//                 healthManager.TakeDamage(20);
+                // Apply knockback when colliding with the Boss
+                if (collision.CompareTag("Boss") && rb != null)
+                {
+                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
+                    rb.velocity = knockback;
+                }
+                return; // No damage if the shield is active
+            }
 
-//                 // Chỉ hủy người chơi nếu máu giảm xuống 0
-//                 if (healthManager.currentHealth <= 0)
-//                 {
-//                     Destroy(gameObject);
-//                     gameManager.CheckGameOver();
-//                 }
-//             }
-//             else
-//             {
-//                 Debug.Log("Player va chạm với Enemy!");
-//                 // Nếu Player không có healthManager, chỉ cần Destroy
-//                 Destroy(gameObject);
-//                 gameManager.CheckGameOver();
-//             }
+            // Handle Damage
+            if (healthManager != null)
+            {
+                int damageAmount = (collision.CompareTag("Boss")) ? 30 : 20; // Boss does more damage
 
-            
-       
+                healthManager.TakeDamage(damageAmount);
+                if (healthManager.currentHealth <= 0)
+                {
+                    Destroy(gameObject);
+                    FindAnyObjectByType<GameManager>().CheckGameOver(); // Gọi trực tiếp từ PlayerController
 
-// >>>>>>> develop
+                }
+
+                // Knockback effect on Player when hit by Boss
+                if (collision.CompareTag("Boss") && rb != null)
+                {
+                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
+                    rb.velocity = knockback;
+                }
+
+
+
+            }
+        }
+
+        // Stomping an Enemy's Head
         if (collision.CompareTag("HeadEnemy"))
         {
-            // Lấy GameObject cha của HeadEnemy (Enemy)
-            GameObject enemyParent = collision.transform.parent.gameObject;
+            GameObject enemyParent = collision.transform.parent?.gameObject;
             if (enemyParent != null)
             {
-                Destroy(enemyParent); // Hủy cả Enemy
+                Destroy(enemyParent); // Destroy the entire enemy
             }
             JumpAfterStomp();
             return;
         }
 
+
+    }
+
+
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         if (collision.CompareTag("Key"))
         {
-            isWin = true;
-            return;
-        }
+            Debug.Log("Nhấn E để nhặt chìa khóa!");
 
-        // Kiểm tra khiên cho các va chạm gây sát thương
-        if (collision.CompareTag("Enemy") || collision.CompareTag("Boss") || collision.CompareTag("Trap"))
-        {
-            // Kiểm tra xem khiên có đang hoạt động không
-            if (shieldController != null && shieldController.IsShieldActive())
+            if (Input.GetKeyDown(KeyCode.E)) // Yêu cầu nhấn phím E
             {
-                Debug.Log("Khiên đã chặn sát thương từ: " + collision.tag);
-
-                // bossđẩy người chơi ra
-                if (collision.CompareTag("Boss"))
-                {
-                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
-                    rb.velocity = knockback;
-                }
-
-                return; // Không gây sát thương nếu khiên đang hoạt động
-            }
-
-            // Xử lý sát thương khi không có khiên
-            if (healthManager != null)
-            {
-                int damageAmount = 20; // Mặc định cho Enemy và Trap
-
-                if (collision.CompareTag("Boss"))
-                {
-                    damageAmount = 30; 
-
-                    // Đẩy Player ra khỏi Boss khi chạm
-                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
-                    rb.velocity = knockback;
-                }
-
-                healthManager.TakeDamage(damageAmount);
-
-                // Kiểm tra nếu máu giảm xuống 0
-                if (healthManager.currentHealth <= 0)
-                {
-                    Destroy(gameObject);
-                }
+                isWin = true;
+                Destroy(collision.gameObject); // Xóa Key khi nhặt
+                Debug.Log("Đã nhặt chìa khóa! Game Win!");
             }
         }
     }
+
+
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
     //    if (collision.gameObject.CompareTag("Enemy"))

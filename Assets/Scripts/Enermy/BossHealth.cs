@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 {
-    private GameManager gameManager;
     [SerializeField] private int maxHealth = 100; // Máu tối đa của Boss
     private int currentHealth;
 
@@ -11,7 +10,6 @@ public class BossHealth : MonoBehaviour
                                                // Start is called before the first frame update
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManager>(); // Tìm GameManager trong scene
         currentHealth = maxHealth;
         UpdateHealthBar();
     }
@@ -20,10 +18,7 @@ public class BossHealth : MonoBehaviour
         currentHealth -= damage;
         UpdateHealthBar();
 
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+       
     }
     private void UpdateHealthBar()
     {
@@ -32,10 +27,5 @@ public class BossHealth : MonoBehaviour
             healthBar.value = (float)currentHealth / maxHealth;
         }
     }
-    private void Die()
-    {
-        Debug.Log("Boss đã bị tiêu diệt!");
-        Destroy(gameObject);
-        gameManager.CheckGameWin();  // Gọi CheckGameWin khi boss chết
-    }
+  
 }
