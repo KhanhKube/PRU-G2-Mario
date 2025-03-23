@@ -6593,7 +6593,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1372123343
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 40330a11aa180ac4cb1074ca03065265, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7984,7 +7984,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -503230281
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1543713796, guid: 34b79da4733ff1644a9c78b2b7c5c47c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8039,7 +8039,11 @@ MonoBehaviour:
   curHealth: 0
   maxHealth: 100
   healthBar: {fileID: 0}
-  waypoints: []
+  waypoints:
+  - {fileID: 297551797}
+  - {fileID: 818940501}
+  - {fileID: 1766894455}
+  - {fileID: 1886557066}
   speed: 3
 --- !u!61 &594706554
 BoxCollider2D:
@@ -8080,7 +8084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 660990985}
 --- !u!1 &632989308
 GameObject:
   m_ObjectHideFlags: 0
@@ -8159,7 +8163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632989308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.75781, y: 4.6494474, z: -10}
+  m_LocalPosition: {x: 25.75784, y: 4.6516695, z: -10}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10887,7 +10891,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1484748907
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 04a06160b4b5d0946be60523d6b55bdb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
