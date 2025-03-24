@@ -32,7 +32,7 @@ public class PlayerBullet : MonoBehaviour
         {
             BossHealth enemyHealth = collision.GetComponent<BossHealth>();
             if (enemyHealth != null)
-            {
+            {  
                 enemyHealth.TakeDamage(damage);
             }
             ReturnToPool();
