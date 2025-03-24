@@ -48,8 +48,8 @@ public class BossController : MonoBehaviour
             // Di chuyển quái đến điểm tiếp theo
             transform.position = Vector2.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
             
-                Debug.Log(transform.position);
-                Debug.Log(targetPoint.position);
+                //Debug.Log(transform.position);
+                //Debug.Log(targetPoint.position);
             // Nếu đã đến gần điểm, chọn điểm mới
             if (Vector2.Distance(transform.position, targetPoint.position) < 0.2f)
             {
