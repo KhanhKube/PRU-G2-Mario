@@ -28,28 +28,27 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Boss"))
+        if (collision.CompareTag("Enemy"))
         {
-            BossHealth enemyHealth = collision.GetComponent<BossHealth>();
-            if (enemyHealth != null)
-            {
-                enemyHealth.TakeDamage(damage);
-            }
-            ReturnToPool();
+            Destroy(collision.gameObject);
         }
-        if (collision.CompareTag("Boss"))
+        else if (collision.CompareTag("Boss"))
         {
-            var bossHealth = collision.GetComponent<BossController>();
+            // Giảm máu Boss nếu có BossHealth script
+            BossHealth bossHealth = collision.GetComponent<BossHealth>();
             if (bossHealth != null)
             {
-                bossHealth.DamageBoss(10);
+                bossHealth.TakeDamage(damage);
             }
-            //countBossTakeDame += 1;
-            //Debug.Log(countBossTakeDame);
-            //if(countBossTakeDame == 10)
-            //{
-            //    isBossDestroy = true;
-            //}
+
+            // Gọi DamageBoss nếu có BossController script
+            BossController bossController = collision.GetComponent<BossController>();
+            if (bossController != null)
+            {
+                bossController.DamageBoss(10);
+            }
+
+            ReturnToPool();
         }
     }
 
@@ -58,4 +57,3 @@ public class PlayerBullet : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
-

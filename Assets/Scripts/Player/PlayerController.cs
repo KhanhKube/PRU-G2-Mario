@@ -146,8 +146,8 @@ public class PlayerController : MonoBehaviour
             if (healthManager != null)
             {
                 int damageAmount = (collision.CompareTag("Boss")) ? 30 : 20; // Boss does more damage
-
                 healthManager.TakeDamage(damageAmount);
+                Debug.Log("take damage"+ healthManager.ToString());
                 if (healthManager.currentHealth <= 0)
                 {
                     Destroy(gameObject);
