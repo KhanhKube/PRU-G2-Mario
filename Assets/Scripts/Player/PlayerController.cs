@@ -139,36 +139,64 @@ public class PlayerController : MonoBehaviour
                     Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
                     rb.velocity = knockback;
                 }
-                return; // No damage if the shield is active
+                return; // Không nhận damage nếu khiên đang hoạt động
             }
 
-            // Handle Damage
+            // Xác định lượng damage theo loại đối tượng
+            int damageAmount = 0;
+            if (collision.CompareTag("Boss")) damageAmount = 15;
+            else if (collision.CompareTag("Enemy")) damageAmount = 10;
+            else if (collision.CompareTag("Trap")) damageAmount = 5;
+
+            // Áp dụng sát thương cho nhân vật
             if (healthManager != null)
             {
-                int damageAmount = (collision.CompareTag("Boss")) ? 30 : 20; // Boss does more damage
                 healthManager.TakeDamage(damageAmount);
-                Debug.Log("take damage"+ healthManager.ToString());
+                Debug.Log("Nhận sát thương: " + damageAmount + " từ " + collision.tag);
+
+                // Kiểm tra nếu máu <= 0 thì nhân vật bị tiêu diệt
+                if (healthManager.currentHealth <= 0)
+                {
+                    Destroy(gameObject);
+                    FindAnyObjectByType<GameManager>().CheckGameOver(); // Gọi kiểm tra Game Over
+                }
+
+                // Hiệu ứng knockback khi bị Boss đánh
+                if (collision.CompareTag("Boss") && rb != null)
+                {
+                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
+                    rb.velocity = knockback;
+                }
+            }
+        }
+
+        // Nhặt chìa khóa
+        if (collision.CompareTag("Key"))
+        {
+            Debug.Log("Nhấn E để nhặt chìa khóa!");
+            isWin = true;
+            Debug.Log("Đã nhặt chìa khóa! Game Win!");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (healthManager != null)
+            {
+                healthManager.TakeDamage(10);
+                Debug.Log("Take Damage");
                 if (healthManager.currentHealth <= 0)
                 {
                     Destroy(gameObject);
                     FindAnyObjectByType<GameManager>().CheckGameOver(); // Gọi trực tiếp từ PlayerController
 
                 }
-
-                // Knockback effect on Player when hit by Boss
-                if (collision.CompareTag("Boss") && rb != null)
-                {
-                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
-                    rb.velocity = knockback;
-                }
-
-
-
             }
         }
-
         // Stomping an Enemy's Head
-        if (collision.CompareTag("HeadEnemy"))
+        if (collision.gameObject.CompareTag("HeadEnemy"))
         {
             GameObject enemyParent = collision.transform.parent?.gameObject;
             if (enemyParent != null)
@@ -178,18 +206,6 @@ public class PlayerController : MonoBehaviour
             JumpAfterStomp();
             return;
         }
-        if (collision.CompareTag("Key"))
-        {
-            Debug.Log("Nhấn E để nhặt chìa khóa!");
-
-            
-                isWin = true;
-               
-                Debug.Log("Đã nhặt chìa khóa! Game Win!");
-           
-        }
-
-
     }
 
 

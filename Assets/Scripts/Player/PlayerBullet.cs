@@ -31,6 +31,13 @@ public class PlayerBullet : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
+            ReturnToPool();
+
+        }
+        if (collision.CompareTag("Ground"))
+        {
+            ReturnToPool();
+
         }
         else if (collision.CompareTag("Boss"))
         {

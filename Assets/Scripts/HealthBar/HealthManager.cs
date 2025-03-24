@@ -26,10 +26,7 @@ public class HealthManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            TakeDamage(20);
-        }
+       
     }
 
     public void TakeDamage(int damage)
