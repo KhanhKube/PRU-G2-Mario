@@ -2,7 +2,7 @@
 
 public class HealthPickup : MonoBehaviour
 {
-    [SerializeField] private int healthAmount = 30;
+    [SerializeField] private int healthAmount = 10;
     private AudioManager audioManager;
 
     private void Awake()

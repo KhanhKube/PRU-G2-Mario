@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8463624423485187099}
   - component: {fileID: 8463624423485187092}
   - component: {fileID: 5282586950519244845}
-  - component: {fileID: -4386976642263618277}
+  - component: {fileID: 4769331982555202830}
   m_Layer: 0
   m_Name: MiniEnemy_K
   m_TagString: Enemy
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   moveDistance: 1
---- !u!61 &-4386976642263618277
+--- !u!61 &4769331982555202830
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -33,6 +33,13 @@ public class PlayerBullet : MonoBehaviour
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
+            ReturnToPool();
+
+        }
+        if (collision.CompareTag("Ground"))
+        {
+            ReturnToPool();
+
         }
         else if (collision.CompareTag("Boss"))
         {
