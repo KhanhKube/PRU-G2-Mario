@@ -8,7 +8,8 @@ public class PlayerBullet : MonoBehaviour
 
     private Rigidbody2D rb;
     private ObjectPool objectPool;
-
+    public Transform explosionPrefab;
+    private bool hasExploded = false;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +31,7 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(collision.gameObject);
             ReturnToPool();
 
@@ -54,7 +56,6 @@ public class PlayerBullet : MonoBehaviour
             {
                 bossController.DamageBoss(10);
             }
-
             ReturnToPool();
         }
     }
@@ -62,5 +63,10 @@ public class PlayerBullet : MonoBehaviour
     private void ReturnToPool()
     {
         gameObject.SetActive(false);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
 }

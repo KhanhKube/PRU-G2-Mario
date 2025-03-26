@@ -149,3 +149,4 @@ MonoBehaviour:
   moveSpeed: 10
   lifeTime: 0.5
   damage: 50
+  explosionPrefab: {fileID: 7527291494661756111, guid: 2646e39b0f5a51545a4b4ddf0cee7dd1, type: 3}
