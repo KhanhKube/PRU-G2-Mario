@@ -3,7 +3,7 @@
 public class PlayerBullet : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;  // Tốc độ di chuyển
-    [SerializeField] private float lifeTime = 0.5f;  // Thời gian tồn tại
+    [SerializeField] private float lifeTime = 0.8f;  // Thời gian tồn tại
     [SerializeField] private int damage = 50;        // Sát thương gây ra
 
     private Rigidbody2D rb;

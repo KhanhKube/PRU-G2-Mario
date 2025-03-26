@@ -151,8 +151,16 @@ public class PlayerController : MonoBehaviour
             // Áp dụng sát thương cho nhân vật
             if (healthManager != null)
             {
+                if (collision.CompareTag("Boss") && rb != null)
+                {
+                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
+                    rb.velocity = knockback;
+                }
+              
                 healthManager.TakeDamage(damageAmount);
                 Debug.Log("Nhận sát thương: " + damageAmount + " từ " + collision.tag);
+                // Hiệu ứng knockback khi bị Boss đánh
+                
 
                 // Kiểm tra nếu máu <= 0 thì nhân vật bị tiêu diệt
                 if (healthManager.currentHealth <= 0)
@@ -161,13 +169,19 @@ public class PlayerController : MonoBehaviour
                     FindAnyObjectByType<GameManager>().CheckGameOver(); // Gọi kiểm tra Game Over
                 }
 
-                // Hiệu ứng knockback khi bị Boss đánh
-                if (collision.CompareTag("Boss") && rb != null)
-                {
-                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
-                    rb.velocity = knockback;
-                }
+               
             }
+            
+        }
+        if (collision.gameObject.CompareTag("HeadEnemy"))
+        {
+            GameObject enemyParent = collision.transform.parent.gameObject;
+            if (enemyParent != null)
+            {
+                Destroy(enemyParent); // Destroy the entire enemy
+            }
+            JumpAfterStomp();
+
         }
 
         // Nhặt chìa khóa
@@ -175,6 +189,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Nhấn E để nhặt chìa khóa!");
             isWin = true;
+            Destroy(collision.gameObject); 
             Debug.Log("Đã nhặt chìa khóa! Game Win!");
         }
     }
@@ -185,6 +200,10 @@ public class PlayerController : MonoBehaviour
         {
             if (healthManager != null)
             {
+               
+                    Vector2 knockback = new Vector2(-transform.localScale.x * 5f, 5f);
+                    rb.velocity = knockback;
+               
                 healthManager.TakeDamage(10);
                 Debug.Log("Take Damage");
                 if (healthManager.currentHealth <= 0)
@@ -196,16 +215,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         // Stomping an Enemy's Head
-        if (collision.gameObject.CompareTag("HeadEnemy"))
-        {
-            GameObject enemyParent = collision.transform.parent?.gameObject;
-            if (enemyParent != null)
-            {
-                Destroy(enemyParent); // Destroy the entire enemy
-            }
-            JumpAfterStomp();
-            return;
-        }
+        
     }
 
 
