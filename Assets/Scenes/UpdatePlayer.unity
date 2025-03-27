@@ -908,6 +908,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1023078193}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &775715947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,6 +958,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775715944}
   m_CullTransparentMesh: 1
+--- !u!114 &1023078193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 136929096718555062, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+  m_PrefabInstance: {fileID: 2081541187}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9009fe189042502489d58c63d149d14e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1110100021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1275,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1023078193}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1274993197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,6 +1411,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1612911171}
         m_TargetAssemblyTypeName: UpgradeStats, Assembly-CSharp
         m_MethodName: UpgradeHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1023078193}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1634,6 +1681,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056391786}
   m_CullTransparentMesh: 1
+--- !u!1001 &2081541187
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 136929096718555061, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555062, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: buttonClickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1c84347c9ffc8434ba48a019934990e8, type: 3}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 136929096718555063, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ded0bcc553bfef40945ef593e64c0a9, type: 3}
 --- !u!1 &2127894687
 GameObject:
   m_ObjectHideFlags: 0

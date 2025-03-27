@@ -152,7 +152,6 @@ public class PlayerController : MonoBehaviour
                 {
                     Destroy(gameObject);
                     FindAnyObjectByType<GameManager>().CheckGameOver(); // Gọi trực tiếp từ PlayerController
-
                 }
 
                 // Knockback effect on Player when hit by Boss

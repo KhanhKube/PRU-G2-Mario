@@ -75,13 +75,8 @@ public class GameManager : MonoBehaviour
         CoinNum++;
         audioManager.PlayCoinSound();
         Destroy(coin);
-        UpdateUI();
-        
-        
+        UpdateUI();     
     }
-
-   
-
     public void CheckGameWin()
     {
         CurrentCoin += CoinNum;
@@ -104,13 +99,14 @@ public class GameManager : MonoBehaviour
 
         PopupGameWin.SetActive(true);
         Time.timeScale = 0f;
-
+        audioManager.gameWinSound();
     }
 
     public void CheckGameOver()
     {
+        audioManager.gameOverSound();
         // Hiển thị "Game Over"
-      PopupGameOver.SetActive(true);
+        PopupGameOver.SetActive(true);
         // Tạm dừng game, ngăn người chơi di chuyển tiếp (tuỳ chọn)
         Time.timeScale = 0f;
 
@@ -138,9 +134,6 @@ public class GameManager : MonoBehaviour
     }
     public void GoToMainMenu()
     {
-
-       
-
         Time.timeScale = 1f; // Đảm bảo game không bị dừng
         SceneManager.LoadScene("MainScene"); // Thay bằng tên scene menu chính
         PlayerPrefs.Save();
